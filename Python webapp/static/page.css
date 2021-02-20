@@ -1,0 +1,141 @@
+/*
+ Student Name: Krzysztof Bas
+ Student Number: C00238768
+*/
+/* Css to style the main body of the page	 */
+body {
+	font-family: "Arial", sans-serif;				/* Set default font for the page */
+	background-color: #3b3b42;						/* Set background color for the page */
+	color: #efefef;									/* Set default color of the font */
+}
+
+/* Css to style the side menu/panel*/
+.sidebar {
+	height: 100%;   								/* Set height to 100% of the page */
+	width: 0;										/* Set initial width to 0 */
+	position: fixed;								/* Set position of the menu as fixed */
+	z-index: 1;										/* Set z-index to 1 which will display menu on top of other elements */
+	top: 0;											/* position the sidebar on the top of the screen */
+	left: 0;										/* position the sidebar on the left of the screen */
+	background-color: #1c1d21;						/* Set the bacground color of the sidepanel */
+	overflow-x: hidden;								/* hide overflow of the side panel element  */
+	transition: 0.5s;								/* Set the time it takes for the side panel to open  */
+	padding-top: 65px;								/* push elements 65px down from the top of the side panel */
+	font-size: 36px;
+}
+
+/* Style the content of the side menu/panel*/
+.sidebar a, .dropdown-btn, .logout {
+	padding: 16px 8px 8px 16px;						/* Set the padding of the menu elements */
+	text-decoration: none;							/* Remove text decoration from menu elements */
+	font-size: 22px;								/* Set font of the menu elements to 22 pixels */
+	color: #eeeeee;									/* Set color of the font */
+	display: block;									/* Display menu elements as block ie. like paragraph */
+	transition: 0.3s;								/* Set the transition time for menu elements ie. It will take 0.3s for a hover effect to be fully displayed */
+	border: none;									/* Remove border of menu elemets */
+	background: transparent;						/* Set background of menu elements to transparent */
+	width:100%;										/* Set width of the menu elements to 100% of the container */
+	text-align:left;								/* Align text to the left */
+	cursor: pointer;								/* Change the mouse cursor to a pointer when over the menu elemets */
+	outline: none;									/* Remove outline of the elements */
+}
+
+
+/* On mouse-over */
+.sidebar a:hover, .dropdown-btn:hover, .logout:hover,.openbtn:hover {
+	color: #4169E1;									/* Change the font of elements when mouse over */
+}
+
+/* Style and position menu exit/hide button */
+.closebtn {
+	position: absolute;								/* Set position to absolute */
+	top: 0;											/* Position the element to the top */
+	left: 230px;									/* Push element 230 pixels from the left side */
+}
+
+/* Style and position menu open/show button */
+.openbtn {
+	font-size: 24px;								/* Set the size of the font of the menu button */
+	cursor: pointer;								/* Change the mouse cursor to a pointer when over the menu elemets */
+	background-color: #111;							/* Set the bacground color of the open/show menu button */
+	color: #eeeeee;									/* Set color of the font */
+	padding: 10px 15px;								/* Set the padding of the open/show menu button */
+	border: none;									/* Remove border  */
+	transition:opacity 1s;						/* Set transition of opacity to 1.5s ie. It will take 0.5s for a button to appear and disappear */
+}
+
+
+/* Add an active class to the active dropdown button */
+.active {
+	background-color: #3E4358;						/* Set background color of the active button */
+	color: #4169E1;									/* Set font color of the active button */
+}
+
+/* Set font color of the active button */
+.caret-down{
+	position:absolute;								/* Set position of the caret-down sign to absolute */
+	left:235px;										/* Position element 235 pixels from the left of its default absolute position*/
+}
+
+/* Dropdown container (hidden by default).  */
+.dropdown-container {
+	display: none;									/* Hide the container */
+	background-color: #262626;						/* Set background color of the container */
+	padding-left: 8px;								/* Set padding of the container to 8 pixels from the left */
+}
+
+/* Style and Position Section that contains form */
+#formSection{
+	width: 80%;										/* Set width to 75% of the container */
+	height:75%;										/* Set height to 75% of the container */
+	position: relative;								/* Set position of the caret-down sign to absolute */
+	left:10%;										/* Position/push element 7.5% of the containers width from the left */
+	padding-top: 4%;								/* Set top padding of the section to 6% of the container */
+	text-align: left;
+
+}
+
+/* Create bottom border */
+.bottomBorder {
+	border-bottom: solid 3px #eeeeee;				/* Set bottom border of the element */
+	margin-top:10px;								/* Set margin from the top to 10pixels */
+
+}
+
+/* main container */
+#main {
+	transition: margin-left .5s;					/* Set transition of left margin to 0.5s ie. It will take 0.5s to change the margin completly */
+	padding: 16px;									/* Set padding of the container to 16 pixels */
+}
+/* Style Hidden paragraph that display system message */
+#message{
+	text-align:center;								/* Align text as center */
+	font-size:20;									/* Set font size to 20 pixels*/
+	color:red;										/* Set text color to red */
+	visibility :hidden;								/* Hide the paragraph */
+	margin:auto;									/* Set margin to auto ie left and right margins are equal */
+}
+
+label,
+textarea{
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea{
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#indent{
+    text-indent: 2%;
+}
+
+

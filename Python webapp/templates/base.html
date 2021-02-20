@@ -1,0 +1,84 @@
+<!--
+Student Name: Krzysztof Bas
+Student Number: C00238768
+ -->
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link href="static/page.css" rel="stylesheet" type="text/css" media="all" />
+    <!--<link href="static/form.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="/">Home</a>
+        <a href="/personalPage">About Me</a>
+        <a href="/CV">CV</a>
+        <button class="dropdown-btn" >Technologies
+            <i class="caret-down">▼</i>
+        </button>
+        <div class="dropdown-container">
+            <a href="/tech1">Python</a>
+            <a href="/tech2">Gaming</a>
+            <a href="/tech3">Algorithms</a>
+        </div>
+        <a href="/interests">Interests</a>
+
+    </div>
+
+    <div id="main">
+
+
+        <button id="menuButton" class="openbtn" onclick="openNav()" value="☰">☰ Menu</button>
+        <h1>{{the_title}}</h1>
+        <p class='bottomBorder' align='right' style="font-size:22;" style="font-weight:bold;"></p>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                    // change the class to 'active' to change its apearence
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "275px";
+                document.getElementById("main").style.marginLeft = "275px";
+                document.getElementById("menuButton").style.opacity = "0";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("menuButton").style.opacity = "1";
+            }
+
+        </script>
+
+
+
+
+
+<section align="center">
+
+    {% block body %}
+
+    {% endblock %}
+
+</section>
+ </div>
+</body>

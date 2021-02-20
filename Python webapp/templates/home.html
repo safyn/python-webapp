@@ -1,0 +1,25 @@
+<!--
+Student Name: Krzysztof Bas
+Student Number: C00238768
+ -->
+
+{% extends 'base.html'%}
+{% block body %}
+
+<p>{{ bobek}}</p>
+    <h3>{{ty_msg}}</h3>
+    <form id="form" method="post" action="/">
+        <p><br><br><br><br>
+            <label>Email Address: </label>
+            <input size="40" type="email" name="email" >
+        </p><br>
+        <p>
+            <label>Please leave a comment: </label>
+            <textarea rows="8" cols="60" name="comment" placeholder="Please leave a comment :)"></textarea>
+        </p>
+
+    </form>
+<p>
+    <button form="form" type="submit">Submit</button></p>
+
+{% endblock %}
